@@ -109,3 +109,97 @@
 #     print("Đơn hàng được miễn phí vận chuyển")
 # else:
 #     print("Đơn hàng không được miễn phí vận chuyển")
+
+# Bài 13: Phân loại khách hàng
+# def classify_customer(total_spent):
+#     if total_spent >= 100000:
+#         return "VIP"
+#     elif total_spent >= 50000:
+#         return "Gold"
+#     else:
+#         return "Normal"
+# i1 = 1000000
+# khach_hang1 = classify_customer(i1)
+# print(f"Điểm thưởng hiện tại: {i1} USD")
+# print(f"Hạng hiện tại: {khach_hang1}")
+
+# # Bài 14: Validate email
+# def is_valid_email(email):
+#     if "@" and "." in email:
+#         print ("Email hợp lệ")
+#     else:
+#         print("Email không hợp lệ")
+
+# Bài 15: Tổng doanh thu
+# def total_revenue(orders):
+#     total = 0
+#     for i in orders:
+#         total += i
+#     return total
+# orders = [100000, 200000, 300000]
+# tong_tien = total_revenue(orders)
+# print(f"Tổng doanh thu là: {tong_tien}")
+
+# Bài 16: Lọc giá cao
+# def filter_prices(prices):
+#     high = []
+#     for i in prices:
+#         if i > 300000:
+#             high.append(i)
+#     return high
+# prices = [100000, 500000, 700000, 200000]
+# gia_cao = filter_prices(prices)
+# print(gia_cao)
+
+# Bài 17: Đếm đơn hợp lệ
+
+# def check_orders(orders):
+#     n = 0
+#     for i in orders:
+#         if i > 0:
+#             n += 1
+#     return n
+# orders = [100000, 0, 200000, -50000]
+# Real_order = check_orders(orders)
+# print("Số lượng đơn đặt hợp lệ:", Real_order)
+
+# Bài 18: Tổng sau giảm giá
+# def apply_discount(prices):
+#     total = 0
+#     for price in prices:
+#         total = int (total + price - (price * 0.1))
+#     return total
+# prices = [100000, 200000, 300000]
+# thanh_toan_sau_discount = apply_discount(prices)
+# print("Tổng số tiền cần thanh toán:", thanh_toan_sau_discount)
+
+# Bài 19: Lọc khách VIP
+# def vip_checker(cart):
+#     vip = True
+#     for i in cart:
+#         if i < 3000000:
+#             vip = False
+#     return vip
+# cart = [200000, 1500000, 800000]
+# customer = vip_checker(cart)
+# if customer == True:
+#     print("Khách này VIP")
+# else:
+#     print("Khách chưa VIP")
+
+# Bài 20: Hệ thống thanh toán (mini backend)
+
+balance = 500000
+cart = [100000, 200000, 150000]
+def checkout(cart, balance):
+    total = 0
+    for i in cart:
+        total += i
+    so_du = balance - total
+    if total <= balance:
+        return {“status”: “Thanh toán thành công”, “Số dư còn lại”:so_du}
+    else:
+        return {“status”: “Không đủ tiền”, “Số dư còn lại”: balance}
+
+khach1 = checkout(cart, balance)
+                
