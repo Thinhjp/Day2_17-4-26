@@ -189,17 +189,17 @@
 
 # Bài 20: Hệ thống thanh toán (mini backend)
 
-balance = 500000
-cart = [100000, 200000, 150000]
-def checkout(cart, balance):
-    total = 0
-    for i in cart:
-        total += i
-    so_du = balance - total
-    if total <= balance:
-        return {“status”: “Thanh toán thành công”, “Số dư còn lại”:so_du}
-    else:
-        return {“status”: “Không đủ tiền”, “Số dư còn lại”: balance}
+# balance = 500000
+# cart = [100000, 200000, 150000]
+# def checkout(cart, balance):
+#     total = 0
+#     for i in cart:
+#         total += i
+#     so_du = balance - total
+#     if total <= balance:
+#         return {"status": "Thanh toán thành công", "Số dư còn lại": so_du}
+#     else:
+#         return {"status": "Không đủ tiền", "Số dư còn lại": balance}
 
-khach1 = checkout(cart, balance)
-                
+# khach1 = checkout(cart, balance)
+# print(khach1)
